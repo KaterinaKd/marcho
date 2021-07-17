@@ -24,13 +24,13 @@
 
     &__list-link {
         color: $title;
-        padding-bottom: 1px;
+        padding: 0 2px 1px;
         transition: all .3s;
-        @extend %quicksand-400;
+        @extend %roboto-400;
         &:hover {
             color: $accent;
             border-bottom: 1px solid $accent;
-            @extend %quicksand-500;
+            @extend %roboto-700;
         }
     }
 
@@ -152,7 +152,7 @@
     &__accept-img {
         display: inline;
         margin-left: 25px;
-        vertical-align: middle
+        vertical-align: middle  
     }
 }
 
