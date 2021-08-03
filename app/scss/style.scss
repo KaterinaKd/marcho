@@ -192,9 +192,9 @@
     .slick-dots {
         display: flex;
         justify-content: center;
-        margin-top: -70px;
+        margin-top: -21px;
         li{
-            padding: 0 5px;
+            padding: 0 px;
             line-height: 0;
             button {
                 padding: 0;
@@ -229,6 +229,146 @@
     }
 }
 
+.categories-info {
+    padding: 120px 0;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 110px;
+    &__item {
+        padding: 60px 30px;
+        width: 370px;
+        box-shadow: 20px 0px 60px 0px rgba(202,202,202,0.34);
+    }
+
+    &__item-title {
+        margin: 35px 0 10px;
+        color: $title;
+        font-size: 22px;
+        @extend %roboto-400;
+    }
+}
+
+.categories {
+    &__items {
+        display: grid;
+        min-height: 635px; 
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+    &__item {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        padding-top: 35px;
+        padding-left: 40px;
+        &:nth-child(1) {
+            grid-row: span 2;
+            .categories__item-subtitle,
+            .categories__link:hover {
+              color: #5800e4;  
+            }
+        }
+        &:nth-child(2) {
+            grid-column: span 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 0;
+            .categories__item-subtitle,
+            .categories__link:hover {
+              color: $accent;  
+              
+            }
+        }
+        &:nth-child(3) {
+            .categories__item-subtitle,
+            .categories__link:hover {
+              color:#ffb534;
+              
+            }
+        }
+        &:nth-child(4) {
+            .categories__item-subtitle,
+            .categories__link:hover {
+              color: #34c3ff;  
+              
+            }
+        }
+    }
+    &__item-subtitle {
+        font-size: 16px;
+        
+    }
+    &__item-title {
+        font-size: 22px;
+        color: $title;
+        margin-bottom: 16px;
+    }
+    &__link {
+        text-transform: uppercase;
+        color: $title;
+        @extend %roboto-400;
+        transition: all .3s;
+    }
+}
+
+.video-fashion {
+    background-image: url('../images/fashion-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    padding: 125px 0;
+    &__inner {
+        display: flex;
+    }
+    &__popup {
+        margin-right: 65px;
+        max-width: 535px;
+        height: 480px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    &__content {
+        max-width: 570px;
+    }
+
+    &__title {
+        text-align: left;
+    }
+
+    &__subtitle {
+        padding-top: 75px;
+        font-size: 22px;
+        color: $accent;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+
+    &__text {
+        margin-bottom: 55px;
+    }
+    
+    &__button {
+        @extend %btn;
+    }
+    
+}
+
+@function max($numbers...) {
+      @return m#{a}(#{$numbers});
+    }
+    @function min($numbers...) {
+      @return m#{i}n(#{$numbers});
+    }
 
 @import 'media';
 
